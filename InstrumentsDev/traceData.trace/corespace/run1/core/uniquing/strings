@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string></string>
+	<string>Unknown</string>
+	<string>User</string>
+	<string>Supervisor</string>
+	<string>Running</string>
+	<string>Runnable</string>
+	<string>Blocked</string>
+	<string>Preempted</string>
+	<string>Uninterruptible</string>
+	<string>Suspended</string>
+	<string>Idle</string>
+	<string>Terminating</string>
+	<string>Terminated</string>
+	<string>TODO</string>
+	<string>Initializing</string>
+	<string>States</string>
+	<string>Initializing application's address space and dynamic linking required frameworks took </string>
+	<string>.</string>
+	<string>Launching</string>
+	<string>Application launched in </string>
+	<string>Foreground</string>
+	<string>Foreground - Active</string>
+	<string>Currently running in the foreground...</string>
+</array>
+</plist>
