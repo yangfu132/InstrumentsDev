@@ -7,6 +7,9 @@
 //
 
 #import "PFTTraceDocument.h"
+
+#if marks
+
 /*
 @implementation PFTTraceDocument
 
@@ -14,7 +17,7 @@
  */
 
 #pragma mark - init
-/*
+
 void * -[PFTTraceDocument init](void * self, void * _cmd) {
     r13 = [[self super] init];
     if (r13 != 0x0) {
@@ -121,10 +124,9 @@ void * -[PFTTraceDocument init](void * self, void * _cmd) {
     rax = r13;
     return rax;
 }
-*/
 
 #pragma mark - readFromURL
-/*
+
 char -[PFTTraceDocument readFromURL:ofType:error:](void * self, void * _cmd, void * arg2, void * arg3, void * * arg4) {
     r8 = arg4;
     var_48 = r8;
@@ -228,4 +230,24 @@ char -[PFTTraceDocument readFromURL:ofType:error:](void * self, void * _cmd, voi
     }
     return rax;
 }
-*/
+
+#pragma mark - startRun
+
+char -[PFTTraceDocument startRun](void * self, void * _cmd) {
+    rbx = [[self targetDevice] retain];
+    self->_runningTraceConnectionUUID = [rbx connectionCount];
+    [rbx release];
+    r15 = [self->_trace startCommandWithPurpose:0x1];
+    rbx = [[self->_trace instrumentCommand] retain];
+    //rbx = Instrument Command (purpose:Idle; output destination:file:///.file/id=6571367.7615829/)
+    
+    rax = [rbx runNumber];
+    //rax = 0
+    
+    [self setSelectedRunNumber:rax];
+    [rbx release];
+    rax = sign_extend_64(r15);
+    return rax;
+}
+
+#endif
