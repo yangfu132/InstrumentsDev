@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "IDMAssemblyLeanModal.h"
 
 @implementation ViewController
 
@@ -15,6 +15,12 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
+    
+    IDMAssemblyLeanModal* modal = [[IDMAssemblyLeanModal alloc] init];
+    if (modal)
+    {
+        
+    }
 }
 
 
